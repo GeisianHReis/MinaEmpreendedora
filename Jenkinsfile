@@ -24,6 +24,12 @@ pipeline {
                 deploy adapters: [tomcat8(credentialsId: 'TomCat', path: '', url: 'http://localhost:8001')], contextPath: 'minaempreendedora-2.6.1', war: 'target/minaempreendedora-2.6.1.war'
             }
         }
+        stage('API Test') {
+            steps {
+                git 'https://github.com/GeisianHReis/MinaEmpreendedora'
+                bat 'mvn test'
+            }
+        }
     }
 }
 
