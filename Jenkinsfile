@@ -26,8 +26,10 @@ pipeline {
         }
         stage('API Test') {
             steps {
-                git 'https://github.com/GeisianHReis/MinaEmpreendedora'
-                bat 'mvn test'
+                dir ('api-est') {
+                    git 'https://github.com/GeisianHReis/MinaEmpreendedora'
+                    bat 'mvn test'
+                }
             }
         }
     }
