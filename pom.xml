@@ -13,7 +13,9 @@
 	<artifactId>minaempreendedora</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>minaempreendedora</name>
+	<packaging>war</packaging>
 	<description>Projeto Mina Empreeendedora</description>
+
 	<properties>
 		<java.version>16</java.version>
 	</properties>
