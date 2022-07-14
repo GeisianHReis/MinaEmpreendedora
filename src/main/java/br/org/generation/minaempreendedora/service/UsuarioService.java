@@ -16,7 +16,10 @@ import br.org.generation.minaempreendedora.repository.UsuarioRepository;
 
 @Service
 public class UsuarioService {
-	
+	public int retorno(int num1, int num2){
+		return num1 + num2;
+	}
+
 	@Autowired
 	private UsuarioRepository usuarioRepository;
 	
@@ -96,9 +99,7 @@ public class UsuarioService {
 		return "Basic " + new String(tokenBase64);
 
 	}
-
-
-	}
+}
 	
 		
 	
